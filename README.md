@@ -1,0 +1,2 @@
+# little_gpt
+一个小型的gpt网络使用的数据集是sales_textbook
