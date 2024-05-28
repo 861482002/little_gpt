@@ -148,7 +148,6 @@ class GPT(nn.Module):
 
 		out = self.proj(out)                # [batch , content_len, vocab_size]
 		if target is not None:
-			logits = F.softmax(out,-1)
 			loss = F.cross_entropy(logits.view(-1, logits.size(-1)), target.view(-1),ignore_index=-1,reduction='mean')
 			return loss
 		else:
